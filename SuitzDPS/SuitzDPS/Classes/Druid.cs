@@ -222,14 +222,14 @@ namespace SuitzDPS.Classes
                     !Rotation.CheckTargetAura((int)Auras.moonfire))
                 {
                     Rotation.CastSpell((int)Spells.moon, 1, 0, 0);
-                    return;
+                    //return;
                 }
 
                 //Starsurge
                 if (Anthrax.AI.Controllers.Spell.CanCast((int)Spells.surge) && !Rotation.CheckPlayerAura((int)Auras.lunarmight))
                 {
                     Rotation.CastSpell((int)Spells.surge, 1, 0, 0);
-                    return;
+                    //return;
                 }
 
                 //Starfire with lunar empower
@@ -237,7 +237,7 @@ namespace SuitzDPS.Classes
                 if (Anthrax.AI.Controllers.Spell.CanCast((int)Spells.starfire))
                 {
                     Rotation.CastSpell((int)Spells.starfire, 1, 0, 0);
-                    return;
+                    //return;
                 }
             }
 
@@ -248,7 +248,7 @@ namespace SuitzDPS.Classes
                 if (Anthrax.AI.Controllers.Spell.CanCast((int)Spells.surge) && !Rotation.CheckPlayerAura((int)Auras.solarmight))
                 {
                     Rotation.CastSpell((int)Spells.surge, 1, 0, 0);
-                    return;
+                    //return;
                 }
 
                 //Sunfire with sunpeak
@@ -258,7 +258,7 @@ namespace SuitzDPS.Classes
                     if (Anthrax.AI.Controllers.Spell.CanCast((int)Spells.sun))
                     {
                         Rotation.CastSpell((int)Spells.sun, 1, 0, 0);
-                        return;
+                       //return;
                     }
                 }
 
@@ -268,7 +268,7 @@ namespace SuitzDPS.Classes
                     if (Anthrax.AI.Controllers.Spell.CanCast((int)Spells.wrath))
                     {
                         Rotation.CastSpell((int)Spells.wrath, 1, 0, 0);
-                        return;
+                        //return;
                     }
                 }
             }
@@ -280,7 +280,7 @@ namespace SuitzDPS.Classes
                 if (Anthrax.AI.Controllers.Spell.CanCast((int)Spells.surge) && !Rotation.CheckPlayerAura((int)Auras.lunarmight))
                 {
                     Rotation.CastSpell((int)Spells.surge, 1, 0, 0);
-                    return;
+                    //return;
                 }
 
                 //Moonfire with lunapeak
@@ -290,7 +290,7 @@ namespace SuitzDPS.Classes
                     if (Anthrax.AI.Controllers.Spell.CanCast((int)Spells.moon))
                     {
                         Rotation.CastSpell((int)Spells.moon, 1, 0, 0);
-                        return;
+                        //return;
                     }
                 }
 
@@ -300,7 +300,7 @@ namespace SuitzDPS.Classes
                     if (Anthrax.AI.Controllers.Spell.CanCast((int)Spells.starfire))
                     {
                         Rotation.CastSpell((int)Spells.starfire, 1, 0, 0);
-                        return;
+                        //return;
                     }
                 }
 
@@ -312,7 +312,7 @@ namespace SuitzDPS.Classes
                 if (Anthrax.AI.Controllers.Spell.CanCast((int)Spells.sun) && Rotation.CheckPlayerAura((int)Auras.solaremp))
                 {
                     Rotation.CastSpell((int)Spells.sun, 1, 0, 0);
-                    return;
+                    //return;
                 }
             }
 
@@ -322,7 +322,7 @@ namespace SuitzDPS.Classes
                 if (Anthrax.AI.Controllers.Spell.CanCast((int)Spells.moon))
                 {
                     Rotation.CastSpell((int)Spells.moon, 1, 0, 0);
-                    return;
+                    //return;
                 }
             }
 
@@ -330,7 +330,7 @@ namespace SuitzDPS.Classes
             if (Anthrax.AI.Controllers.Spell.CanCast((int)Spells.wrath))
             {
                 Rotation.CastSpell((int)Spells.wrath, 1, 0, 0);
-                return;
+                //return;
             }
 
         }

@@ -59,7 +59,7 @@ namespace SuitzDPS
                     Warrior.DoWarrior();
                     break;
                 case WowUnit.WowUnitClass.Hunter:
-                    //Hunter.DoHunter();
+                    Hunter.DoHunter();
                     break;
                 case WowUnit.WowUnitClass.Druid:
                     Druid.DoDruid();
@@ -68,22 +68,22 @@ namespace SuitzDPS
                     Shaman.DoShaman();
                     break;
                 case WowUnit.WowUnitClass.Rogue:
-                    //Rogue.DoCombat();
+                    Rogue.DoRogue();
                     break;
                 case WowUnit.WowUnitClass.Priest:
-                    //Priest.DoCombat();
+                    Priest.DoPriest();
                     break;
                 case WowUnit.WowUnitClass.DeathKnight:
                     DeathKnight.DoDeathKnight();
                     break;
                 case WowUnit.WowUnitClass.Mage:
-                    //Mage.DoCombat();
+                    Mage.DoMage();
                     break;
                 case WowUnit.WowUnitClass.Warlock:
-                    //Warlock.DoWarlock();
+                    Warlock.DoWarlock();
                     break;
                 case WowUnit.WowUnitClass.Monk:
-                    //Monk.DoCombat();
+                    Monk.DoMonk();
                     break;
 
             }

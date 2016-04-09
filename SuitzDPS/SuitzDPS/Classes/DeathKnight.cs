@@ -470,7 +470,7 @@ namespace SuitzDPS.Classes
 
             {
                 Rotation.CastSpell((int)Spells.UnholyBlight, 1, 0, 0);
-                return;
+                //return;
             }
 
 
@@ -480,7 +480,7 @@ namespace SuitzDPS.Classes
                 ObjectManager.LocalPlayer.GetPowerPercent(WowUnit.WowPowerType.RunicPower) <= 90)
             {
                 Rotation.CastSpell((int)Spells.SoulReaper, 1, 0, 0);
-                return;
+                //return;
             }
 
 
@@ -491,14 +491,14 @@ namespace SuitzDPS.Classes
                 if (Anthrax.AI.Controllers.Spell.CanCast((int)Spells.Outbreak))
                 {
                     Rotation.CastSpell((int)Spells.Outbreak, 1, 0, 0);
-                    return;
+                    //return;
                 }
                 else
                 {
                     if (Anthrax.AI.Controllers.Spell.CanCast((int)Spells.PlagueStrike))
                     {
                         Rotation.CastSpell((int)Spells.PlagueStrike, 1, 0, 0);
-                        return;
+                        //return;
                     }
                 }
             }
@@ -509,7 +509,7 @@ namespace SuitzDPS.Classes
                ObjectManager.LocalPlayer.GetPowerPercent(WowUnit.WowPowerType.RunicPower) >= 81 && Anthrax.AI.Controllers.Spell.CanCast((int)Spells.DeathCoil))
             {
                 Rotation.CastSpell((int)Spells.DeathCoil, 1, 0, 0);
-                return;
+                //return;
             }
 
             runes = 0;
@@ -518,27 +518,27 @@ namespace SuitzDPS.Classes
             if (runes == 2 && Anthrax.AI.Controllers.Spell.CanCast((int)Spells.ScourgeStrike))
             {
                 Rotation.CastSpell((int)Spells.ScourgeStrike, 1, 0, 0);
-                return;
+                //return;
             }
 
             // Festering Strike
             if ((Anthrax.AI.Controllers.Spell.CanCast((int)Spells.FesteringStrike)) && !Anthrax.AI.Controllers.Spell.CanCast((int)Spells.UnholyBlight))
             {
                 Rotation.CastSpell((int)Spells.FesteringStrike, 1, 0, 0);
-                return;
+                //return;
             }
 
             // DarkT
             if (Rotation.CheckPlayerAuraStacks((int)Auras.Shadow) > 4 && Anthrax.AI.Controllers.Spell.CanCast((int)Spells.DarkT))
             {
                 Rotation.CastSpell((int)Spells.DarkT, 1, 0, 0);
-                return;
+                //return;
             }
 
             if (Rotation.CheckPlayerAuraStacks((int)Auras.BloodTap) > 10 && Anthrax.AI.Controllers.Spell.CanCast((int)Spells.BloodTap) && Rotation.CheckRuneCount() <= 4)
             {
                 Rotation.CastSpell((int)Spells.BloodTap, 0, 0, 0);
-                return;
+                //return;
             }
 
             // Death Coil
@@ -546,21 +546,21 @@ namespace SuitzDPS.Classes
                 Rotation.CheckPlayerAuraStacks((int)Auras.BloodTap) <= 10 && Anthrax.AI.Controllers.Spell.CanCast((int)Spells.DeathCoil))
             {
                 Rotation.CastSpell((int)Spells.DeathCoil, 1, 0, 0);
-                return;
+                //return;
             }
 
             // Festering Strike
             if (Anthrax.AI.Controllers.Spell.CanCast((int)Spells.FesteringStrike) && ObjectManager.LocalPlayer.GetPowerPercent(WowUnit.WowPowerType.RunicPower) < 75)
             {
                 Rotation.CastSpell((int)Spells.FesteringStrike, 1, 0, 0);
-                return;
+                //return;
             }
 
             // Scourge Strike
             if ((Anthrax.AI.Controllers.Spell.CanCast((int)Spells.ScourgeStrike)) && ObjectManager.LocalPlayer.GetPowerPercent(WowUnit.WowPowerType.RunicPower) < 75)
             {
                 Rotation.CastSpell((int)Spells.ScourgeStrike, 1, 0, 0);
-                return;
+                //return;
             }
 
             Anthrax.AI.Controllers.Spell.AttackTarget();
@@ -597,13 +597,13 @@ namespace SuitzDPS.Classes
                      !Rotation.CheckTargetAura((int)Auras.BloodPlague) && Anthrax.AI.Controllers.Spell.CanCast((int)Spells.Outbreak) && ObjectManager.LocalPlayer.GetPowerPercent(WowUnit.WowPowerType.RunicPower) <= 30)
                 {
                     Rotation.CastSpell((int)Spells.Outbreak, 1, 0, 0);
-                    return;
+                    //return;
                 }
 
                 if (!Rotation.CheckTargetAura((int)Auras.BloodPlague) && Anthrax.AI.Controllers.Spell.CanCast((int)Spells.PlagueStrike) && ObjectManager.LocalPlayer.GetPowerPercent(WowUnit.WowPowerType.RunicPower) <= 30)
                 {
                     Rotation.CastSpell((int)Spells.PlagueStrike, 1, 0, 0);
-                    return;
+                    //return;
                 }
 
                 //Soul Reaper if Target Health below 45%
@@ -611,27 +611,27 @@ namespace SuitzDPS.Classes
                     ObjectManager.LocalPlayer.GetPowerPercent(WowUnit.WowPowerType.RunicPower) <= 90)
                 {
                     Rotation.CastSpell((int)Spells.SoulReaper, 1, 0, 0);
-                    return;
+                    //return;
                 }
 
                 // Scourge Strike
                 if ((Anthrax.AI.Controllers.Spell.CanCast((int)Spells.ScourgeStrike)) && ObjectManager.LocalPlayer.GetPowerPercent(WowUnit.WowPowerType.RunicPower) <= 88)
                 {
                     Rotation.CastSpell((int)Spells.ScourgeStrike, 1, 0, 0);
-                    return;
+                    //return;
                 }
 
                 // Festering Strike
                 if ((Anthrax.AI.Controllers.Spell.CanCast((int)Spells.FesteringStrike)) && ObjectManager.LocalPlayer.GetPowerPercent(WowUnit.WowPowerType.RunicPower) <= 80)
                 {
                     Rotation.CastSpell((int)Spells.FesteringStrike, 1, 0, 0);
-                    return;
+                    //return;
                 }
 
                 if (Rotation.CheckPlayerAuraStacks((int)Auras.BloodTap) >= 5 && Anthrax.AI.Controllers.Spell.CanCast((int)Spells.BloodTap) && Rotation.CheckRuneCount() <= 4)
                 {
                     Rotation.CastSpell((int)Spells.BloodTap, 0, 0, 0);
-                    return;
+                    //return;
                 }
 
                 // Plague Leech if Outbreak is up and 2 runes empty
@@ -640,20 +640,20 @@ namespace SuitzDPS.Classes
                     Anthrax.AI.Controllers.Spell.CanCast((int)Spells.PlagueLeech) && Rotation.CheckRuneCount() < 4)
                 {
                     Rotation.CastSpell((int)Spells.PlagueLeech, 0, 0, 0);
-                    return;
+                    //return;
                 }
 
                 if (Rotation.CheckPlayerAura((int)Auras.SDoom))
                 {
                     Rotation.CastSpell((int)Spells.DeathCoil, 0, 0, 0);
-                    return;
+                    //return;
                 }
 
                 // DarkT
                 if (Rotation.CheckPlayerAuraStacks((int)Auras.Shadow) > 4 && Anthrax.AI.Controllers.Spell.CanCast((int)Spells.DarkT))
                 {
                     Rotation.CastSpell((int)Spells.DarkT, 1, 0, 0);
-                    return;
+                    //return;
                 }
                 Anthrax.AI.Controllers.Spell.AttackTarget();
             }
@@ -664,27 +664,27 @@ namespace SuitzDPS.Classes
                     !Rotation.CheckTargetAura((int)Auras.BloodPlague) && Anthrax.AI.Controllers.Spell.CanCast((int)Spells.Outbreak))
                 {
                     Rotation.CastSpell((int)Spells.Outbreak, 1, 0, 0);
-                    return;
+                    //return;
                 }
 
                 if (!Rotation.CheckTargetAura((int)Auras.BloodPlague) && Anthrax.AI.Controllers.Spell.CanCast((int)Spells.PlagueStrike) || 
                     Rotation.CheckTargetAuraDuration((int)Auras.BloodPlague) < 3000 && Anthrax.AI.Controllers.Spell.CanCast((int)Spells.PlagueStrike))
                 {
                     Rotation.CastSpell((int)Spells.PlagueStrike, 1, 0, 0);
-                    return;
+                    //return;
                 }
 
                 if (Rotation.CheckPlayerAura((int)Auras.SDoom))
                 {
                     Rotation.CastSpell((int)Spells.DeathCoil, 0, 0, 0);
-                    return;
+                    //return;
                 }
 
                 // DarkT
                 if (Rotation.CheckPlayerAuraStacks((int)Auras.Shadow) > 4 && Anthrax.AI.Controllers.Spell.CanCast((int)Spells.DarkT))
                 {
                     Rotation.CastSpell((int)Spells.DarkT, 1, 0, 0);
-                    return;
+                    //return;
                 }
                 Anthrax.AI.Controllers.Spell.AttackTarget();
             }
@@ -696,7 +696,7 @@ namespace SuitzDPS.Classes
                 if (Rotation.CheckTargetAura((int)Auras.BloodPlague) && Anthrax.AI.Controllers.Spell.CanCast((int)Spells.PlagueStrike) && Rotation.CheckTargetAuraDuration((int)Auras.BloodPlague) < 3000)
                 {
                     Rotation.CastSpell((int)Spells.PlagueStrike, 1, 0, 0);
-                    return;
+                    //return;
                 }
 
                 if (Rotation.CheckTargetAura((int)Auras.FrostFever) &&
@@ -707,7 +707,7 @@ namespace SuitzDPS.Classes
                         if (Rotation.CheckRuneCount() < 4)
                         {
                             Rotation.CastSpell((int)Spells.PlagueLeech, 1, 0, 0);
-                            return;
+                            //return;
                         }
                     }
                 }
@@ -717,13 +717,13 @@ namespace SuitzDPS.Classes
                         !Rotation.CheckTargetAura((int)Auras.BloodPlague) && Anthrax.AI.Controllers.Spell.CanCast((int)Spells.Outbreak))
                     {
                         Rotation.CastSpell((int)Spells.Outbreak, 1, 0, 0);
-                        return;
+                        //return;
                     }
 
                     if (!Rotation.CheckTargetAura((int)Auras.BloodPlague) && Anthrax.AI.Controllers.Spell.CanCast((int)Spells.PlagueStrike))
                     {
                         Rotation.CastSpell((int)Spells.PlagueStrike, 1, 0, 0);
-                        return;
+                        //return;
                     }
                 }
 
@@ -732,41 +732,41 @@ namespace SuitzDPS.Classes
                     ObjectManager.LocalPlayer.GetPowerPercent(WowUnit.WowPowerType.RunicPower) <= 90)
                 {
                     Rotation.CastSpell((int)Spells.SoulReaper, 1, 0, 0);
-                    return;
+                    //return;
                 }
 
                 // DarkT
                 if (Rotation.CheckPlayerAuraStacks((int)Auras.Shadow) > 4 && Anthrax.AI.Controllers.Spell.CanCast((int)Spells.DarkT))
                 {
                     Rotation.CastSpell((int)Spells.DarkT, 1, 0, 0);
-                    return;
+                    //return;
                 }
 
                 if (Rotation.CheckPlayerAura((int)Auras.SDoom))
                 {
                     Rotation.CastSpell((int)Spells.DeathCoil, 0, 0, 0);
-                    return;
+                    //return;
                 }
 
                 // Death Coil
                 if (ObjectManager.LocalPlayer.GetPowerPercent(WowUnit.WowPowerType.RunicPower) >= 88 && Anthrax.AI.Controllers.Spell.CanCast((int)Spells.DeathCoil))
                 {
                     Rotation.CastSpell((int)Spells.DeathCoil, 0, 0, 0);
-                    return;
+                    //return;
                 }
 
                 // Scourge Strike
                 if ((Anthrax.AI.Controllers.Spell.CanCast((int)Spells.ScourgeStrike)) && ObjectManager.LocalPlayer.GetPowerPercent(WowUnit.WowPowerType.RunicPower) <= 88)
                 {
                     Rotation.CastSpell((int)Spells.ScourgeStrike, 1, 0, 0);
-                    return;
+                    //return;
                 }
 
                 // Festering Strike
                 if ((Anthrax.AI.Controllers.Spell.CanCast((int)Spells.FesteringStrike)) && ObjectManager.LocalPlayer.GetPowerPercent(WowUnit.WowPowerType.RunicPower) <= 80)
                 {
                     Rotation.CastSpell((int)Spells.FesteringStrike, 1, 0, 0);
-                    return;
+                    //return;
                 }
                 Anthrax.AI.Controllers.Spell.AttackTarget();
             }
@@ -778,7 +778,7 @@ namespace SuitzDPS.Classes
                 if (Rotation.CheckTargetAura((int)Auras.BloodPlague) && Anthrax.AI.Controllers.Spell.CanCast((int)Spells.PlagueStrike) && Rotation.CheckTargetAuraDuration((int)Auras.BloodPlague) < 3000)
                 {
                     Rotation.CastSpell((int)Spells.PlagueStrike, 1, 0, 0);
-                    return;
+                    //return;
                 }
 
                 if (Rotation.CheckTargetAura((int)Auras.FrostFever) &&
@@ -789,7 +789,7 @@ namespace SuitzDPS.Classes
                         if (Rotation.CheckRuneCount() < 4)
                         {
                             Rotation.CastSpell((int)Spells.PlagueLeech, 1, 0, 0);
-                            return;
+                            //return;
                         }
                     }
                 }
@@ -799,13 +799,13 @@ namespace SuitzDPS.Classes
                         !Rotation.CheckTargetAura((int)Auras.BloodPlague) && Anthrax.AI.Controllers.Spell.CanCast((int)Spells.Outbreak))
                     {
                         Rotation.CastSpell((int)Spells.Outbreak, 1, 0, 0);
-                        return;
+                        //return;
                     }
 
                     if (!Rotation.CheckTargetAura((int)Auras.BloodPlague) && Anthrax.AI.Controllers.Spell.CanCast((int)Spells.PlagueStrike))
                     {
                         Rotation.CastSpell((int)Spells.PlagueStrike, 1, 0, 0);
-                        return;
+                        //return;
                     }
                 }
 
@@ -814,20 +814,20 @@ namespace SuitzDPS.Classes
                     ObjectManager.LocalPlayer.GetPowerPercent(WowUnit.WowPowerType.RunicPower) <= 90)
                 {
                     Rotation.CastSpell((int)Spells.SoulReaper, 1, 0, 0);
-                    return;
+                    //return;
                 }
 
                 // DarkT
                 if (Rotation.CheckPlayerAuraStacks((int)Auras.Shadow) > 4 && Anthrax.AI.Controllers.Spell.CanCast((int)Spells.DarkT))
                 {
                     Rotation.CastSpell((int)Spells.DarkT, 1, 0, 0);
-                    return;
+                    //return;
                 }
 
                 if (Rotation.CheckPlayerAura((int)Auras.SDoom))
                 {
                     Rotation.CastSpell((int)Spells.DeathCoil, 0, 0, 0);
-                    return;
+                    //return;
                 }
 
                 // Death Coil
@@ -835,27 +835,27 @@ namespace SuitzDPS.Classes
                     (Rotation.CheckPlayerAura((int)Auras.Shadow) && Anthrax.AI.Controllers.Spell.CanCast((int)Spells.DeathCoil)))
                 {
                     Rotation.CastSpell((int)Spells.DeathCoil, 0, 0, 0);
-                    return;
+                    //return;
                 }
 
                 // Scourge Strike
                 if ((Anthrax.AI.Controllers.Spell.CanCast((int)Spells.ScourgeStrike)) && ObjectManager.LocalPlayer.GetPowerPercent(WowUnit.WowPowerType.RunicPower) <= 88)
                 {
                     Rotation.CastSpell((int)Spells.ScourgeStrike, 1, 0, 0);
-                    return;
+                    //return;
                 }
 
                 // Festering Strike
                 if ((Anthrax.AI.Controllers.Spell.CanCast((int)Spells.FesteringStrike)) && ObjectManager.LocalPlayer.GetPowerPercent(WowUnit.WowPowerType.RunicPower) <= 80)
                 {
                     Rotation.CastSpell((int)Spells.FesteringStrike, 1, 0, 0);
-                    return;
+                    //return;
                 }
 
                 if (Rotation.CheckPlayerAuraStacks((int)Auras.BloodTap) >= 5 && Anthrax.AI.Controllers.Spell.CanCast((int)Spells.BloodTap) && Rotation.CheckRuneCount() <= 4)
                 {
                     Rotation.CastSpell((int)Spells.BloodTap, 0, 0, 0);
-                    return;
+                    //return;
                 }
 
                 Anthrax.AI.Controllers.Spell.AttackTarget();
