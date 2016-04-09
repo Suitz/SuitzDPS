@@ -46,7 +46,7 @@ namespace SuitzDPS.Classes
         }
 
 
-        internal static void DoCombatMageFury()
+        internal static void DoCombatMageArcane()
         {
             if (ObjectManager.Target.IsValid && !ObjectManager.LocalPlayer.IsCasting)
             {
@@ -54,19 +54,19 @@ namespace SuitzDPS.Classes
                 switch (Init.tier100)
                 {
                     case 1:
-                        DoCombatMageFury1();
+                        DoCombatMageArcane1();
                         break;
                     case 2:
-                        DoCombatMageFury2();
+                        DoCombatMageArcane2();
                         break;
                     case 3:
-                        DoCombatMageFury3();
+                        DoCombatMageArcane3();
                         break;
                 }
             }
         }
 
-        internal static void DoCombatMageArms()
+        internal static void DoCombatMageFire()
         {
 
             if (ObjectManager.Target.IsValid && !ObjectManager.LocalPlayer.IsCasting)
@@ -101,7 +101,7 @@ namespace SuitzDPS.Classes
             }
         }
 
-        internal static void DoCombatMageProtection()
+        internal static void DoCombatMageFrost()
         {
 
             if (ObjectManager.Target.IsValid && !ObjectManager.LocalPlayer.IsCasting)
@@ -122,62 +122,62 @@ namespace SuitzDPS.Classes
             }
         }
 
-        internal static void DoCombatMageFury1()
+        internal static void DoCombatMageArcane1()
         {
             switch (Rotation.isAOE)
             {
                 case false:
-                    DoCombatMageFury1Single();
+                    DoCombatMageArcane1Single();
                     break;
                 case true:
-                    DoCombatMageFury1AOE();
+                    DoCombatMageArcane1AOE();
                     break;
             }
 
         }
 
-        internal static void DoCombatMageFury2()
+        internal static void DoCombatMageArcane2()
         {
             switch (Rotation.isAOE)
             {
                 case false:
-                    DoCombatMageFury2Single();
+                    DoCombatMageArcane2Single();
                     break;
                 case true:
-                    DoCombatMageFury2AOE();
+                    DoCombatMageArcane2AOE();
                     break;
             }
 
         }
 
-        internal static void DoCombatMageFury3()
+        internal static void DoCombatMageArcane3()
         {
             switch (Rotation.isAOE)
             {
                 case false:
-                    DoCombatMageFury3Single();
+                    DoCombatMageArcane3Single();
                     break;
                 case true:
-                    DoCombatMageFury3AOE();
+                    DoCombatMageArcane3AOE();
                     break;
             }
 
         }
 
-        internal static void DoCombatMageFury1Single()
+        internal static void DoCombatMageArcane1Single()
         {
             
 
         }
 
 
-        internal static void DoCombatMageFury1AOE()
+        internal static void DoCombatMageArcane1AOE()
         {
 
         }
 
 
-        internal static void DoCombatMageFury2Single()
+        internal static void DoCombatMageArcane2Single()
         {
             
 
@@ -185,17 +185,17 @@ namespace SuitzDPS.Classes
         }
     
 
-        internal static void DoCombatMageFury2AOE()
+        internal static void DoCombatMageArcane2AOE()
         {
 
         }
 
-        internal static void DoCombatMageFury3Single()
+        internal static void DoCombatMageArcane3Single()
         {
 
         }
 
-        internal static void DoCombatMageFury3AOE()
+        internal static void DoCombatMageArcane3AOE()
         {
 
         }
@@ -238,49 +238,49 @@ namespace SuitzDPS.Classes
             switch (ObjectManager.LocalPlayer.Specialization)
             {
                 case Anthrax.WoW.Classes.ObjectManager.WowPlayer.WowSpecialization.MageArcane:
-                    DoMageFury();
+                    DoMageArcane();
                     break;
                 case Anthrax.WoW.Classes.ObjectManager.WowPlayer.WowSpecialization.MageFire:
-                    DoMageArms();
+                    DoMageFire();
                     break;
                 case Anthrax.WoW.Classes.ObjectManager.WowPlayer.WowSpecialization.MageFrost:
-                    DoMageProtection();
+                    DoMageFrost();
                     break;
             }
 
 
         }
 
-        internal static void DoMageProtection()
+        internal static void DoMageFrost()
         {
 
             /*Init.CheckTierMage();
             if (ObjectManager.LocalPlayer.InCombat)
             {
-                Mage.DoCombatMageArms();
+                Mage.DoCombatMageFire();
                 return;
             }
-            Mage.DoPreCombatMageProtection();
+            Mage.DoPreCombatMageFrost();
             */
         }
 
-        internal static void DoMageFury()
+        internal static void DoMageArcane()
         {
             Init.CheckTierMage();
             if (ObjectManager.LocalPlayer.InCombat)
             {
-                Mage.DoCombatMageFury();
+                Mage.DoCombatMageArcane();
                 return;
             }
             Mage.DoPreCombatMage();
         }
 
-        internal static void DoMageArms()
+        internal static void DoMageFire()
         {
             Init.CheckTierMage();
             if (ObjectManager.LocalPlayer.InCombat)
             {
-                Mage.DoCombatMageArms();
+                Mage.DoCombatMageFire();
                 return;
             }
             Mage.DoPreCombatMage();
@@ -296,7 +296,7 @@ namespace SuitzDPS.Classes
             Rotation.CastSpell(324, 1, 0, 0);
         }
 
-        internal static void DoPreCombatMageProtection()
+        internal static void DoPreCombatMageFrost()
         {
             // Check Horn of Winter
             if (Rotation.CheckPlayerAuraDuration(20925) >= 3000 || !Anthrax.AI.Controllers.Spell.CanCast(57330))
