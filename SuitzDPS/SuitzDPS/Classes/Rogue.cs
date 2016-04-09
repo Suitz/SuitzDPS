@@ -235,16 +235,15 @@ namespace SuitzDPS.Classes
                 return;
             }*/
 
-
             switch (ObjectManager.LocalPlayer.Specialization)
             {
-                case Anthrax.WoW.Classes.ObjectManager.WowPlayer.WowSpecialization.RogueFury:
+                case Anthrax.WoW.Classes.ObjectManager.WowPlayer.WowSpecialization.RogueAssassination:
                     DoRogueFury();
                     break;
-                case Anthrax.WoW.Classes.ObjectManager.WowPlayer.WowSpecialization.RogueArms:
+                case Anthrax.WoW.Classes.ObjectManager.WowPlayer.WowSpecialization.RogueCombat:
                     DoRogueArms();
                     break;
-                case Anthrax.WoW.Classes.ObjectManager.WowPlayer.WowSpecialization.RogueProtection:
+                case Anthrax.WoW.Classes.ObjectManager.WowPlayer.WowSpecialization.RogueSubtlety:
                     DoRogueProtection();
                     break;
             }

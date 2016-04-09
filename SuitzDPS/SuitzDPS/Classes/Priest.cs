@@ -235,16 +235,15 @@ namespace SuitzDPS.Classes
                 return;
             }*/
 
-
             switch (ObjectManager.LocalPlayer.Specialization)
             {
-                case Anthrax.WoW.Classes.ObjectManager.WowPlayer.WowSpecialization.PriestFury:
+                case Anthrax.WoW.Classes.ObjectManager.WowPlayer.WowSpecialization.PriestDiscipline:
                     DoPriestFury();
                     break;
-                case Anthrax.WoW.Classes.ObjectManager.WowPlayer.WowSpecialization.PriestArms:
+                case Anthrax.WoW.Classes.ObjectManager.WowPlayer.WowSpecialization.PriestHoly:
                     DoPriestArms();
                     break;
-                case Anthrax.WoW.Classes.ObjectManager.WowPlayer.WowSpecialization.PriestProtection:
+                case Anthrax.WoW.Classes.ObjectManager.WowPlayer.WowSpecialization.PriestShadow:
                     DoPriestProtection();
                     break;
             }

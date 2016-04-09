@@ -235,16 +235,15 @@ namespace SuitzDPS.Classes
                 return;
             }*/
 
-
             switch (ObjectManager.LocalPlayer.Specialization)
             {
-                case Anthrax.WoW.Classes.ObjectManager.WowPlayer.WowSpecialization.HunterFury:
+                case Anthrax.WoW.Classes.ObjectManager.WowPlayer.WowSpecialization.HunterBeastmaster:
                     DoHunterFury();
                     break;
-                case Anthrax.WoW.Classes.ObjectManager.WowPlayer.WowSpecialization.HunterArms:
+                case Anthrax.WoW.Classes.ObjectManager.WowPlayer.WowSpecialization.HunterMarksman:
                     DoHunterArms();
                     break;
-                case Anthrax.WoW.Classes.ObjectManager.WowPlayer.WowSpecialization.HunterProtection:
+                case Anthrax.WoW.Classes.ObjectManager.WowPlayer.WowSpecialization.HunterSurvival:
                     DoHunterProtection();
                     break;
             }

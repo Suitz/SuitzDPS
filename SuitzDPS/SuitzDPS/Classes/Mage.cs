@@ -235,16 +235,15 @@ namespace SuitzDPS.Classes
                 return;
             }*/
 
-
             switch (ObjectManager.LocalPlayer.Specialization)
             {
-                case Anthrax.WoW.Classes.ObjectManager.WowPlayer.WowSpecialization.MageFury:
+                case Anthrax.WoW.Classes.ObjectManager.WowPlayer.WowSpecialization.MageArcane:
                     DoMageFury();
                     break;
-                case Anthrax.WoW.Classes.ObjectManager.WowPlayer.WowSpecialization.MageArms:
+                case Anthrax.WoW.Classes.ObjectManager.WowPlayer.WowSpecialization.MageFire:
                     DoMageArms();
                     break;
-                case Anthrax.WoW.Classes.ObjectManager.WowPlayer.WowSpecialization.MageProtection:
+                case Anthrax.WoW.Classes.ObjectManager.WowPlayer.WowSpecialization.MageFrost:
                     DoMageProtection();
                     break;
             }

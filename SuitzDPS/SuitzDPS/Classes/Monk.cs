@@ -235,16 +235,15 @@ namespace SuitzDPS.Classes
                 return;
             }*/
 
-
             switch (ObjectManager.LocalPlayer.Specialization)
             {
-                case Anthrax.WoW.Classes.ObjectManager.WowPlayer.WowSpecialization.MonkFury:
+                case Anthrax.WoW.Classes.ObjectManager.WowPlayer.WowSpecialization.MonkBrewmaster:
                     DoMonkFury();
                     break;
-                case Anthrax.WoW.Classes.ObjectManager.WowPlayer.WowSpecialization.MonkArms:
+                case Anthrax.WoW.Classes.ObjectManager.WowPlayer.WowSpecialization.MonkBattledancer:
                     DoMonkArms();
                     break;
-                case Anthrax.WoW.Classes.ObjectManager.WowPlayer.WowSpecialization.MonkProtection:
+                case Anthrax.WoW.Classes.ObjectManager.WowPlayer.WowSpecialization.MonkMistweaver:
                     DoMonkProtection();
                     break;
             }
